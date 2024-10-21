@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Никитин Михаил - опытный разработчик на Python с 4 годами опыта. Участник олимпиад, фрилансер и студент НИУ ВШЭ.">
+    <title>Никитин Михаил - Разработчик на Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background: #282c34;
+            color: #fff;
+        }
+
+        /* Background with gradient animation */
+        body {
+            background: linear-gradient(45deg, #1f4037, #99f2c8);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header and navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px; /* margin for fixed header */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease forwards;
+            opacity: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            animation: fadeIn 2.5s ease forwards;
+            opacity: 0;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #61dafb;
+            color: #282c34;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            animation: fadeIn 3s ease forwards;
+            opacity: 0;
+        }
+
+        .hero a:hover {
+            background-color: #21a1f1;
+        }
+
+        /* Keyframes for smooth fade in */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Blocks section */
+        .blocks {
+            padding: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .block {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .block:hover {
+            transform: translateY(-10px);
+        }
+
+        .block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .block p {
+            font-size: 1rem;
+        }
+
+        /* Experience section */
+        .experience {
+            padding: 50px;
+            background-color: #1c1c1c;
+            text-align: center;
+            animation: fadeIn 3.5s ease forwards;
+            opacity: 0;
+        }
+
+        .experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .experience-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #333;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 300px;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+
+        /* Hobbies and Interests section */
+        .hobbies {
+            padding: 50px;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .hobbies h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        /* Contact section */
+        .contact {
+            padding: 50px;
+            background-color: #2a2a2a;
+            text-align: center;
+            animation: fadeIn 4s ease forwards;
+            opacity: 0;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact input[type="submit"] {
+            background-color: #61dafb;
+            color: #282c34;
+            cursor: pointer;
+        }
+
+        .contact input[type="submit"]:hover {
+            background-color: #21a1f1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #61dafb;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #21a1f1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#experience">Опыт</a>
+            <a href="#hobbies">Хобби и увлечения</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Никитин Михаил</h1>
+        <p>Разработчик с 4 годами опыта на Python. Участник олимпиад, фрилансер, студент НИУ ВШЭ.</p>
+        <a href="#experience">Узнать больше</a>
+    </div>
+
+    <section id="experience" class="experience">
+        <h2>Опыт</h2>
+        <div class="experience-cards">
+            <div class="card">
+                <h3>Python Разработка</h3>
+                <p>4 года опыта написания кода на Python. От простых скриптов до комплексных проектов. Различные телеграм боты, парсеры, бэкенд. Опыт DevOps разработки.</p>
+            </div>
+            <div class="card">
+                <h3>Олимпиады</h3>
+                <p>Участие в различных олимпиадах, будучи школьником, например Phystech International.</p>
+            </div>
+            <div class="card">
+                <h3>Фриланс</h3>
+                <p>Опыт работы на фрилансе, выполнение задач для различных заказчиков, в том числе и частных компаний.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="hobbies">
+        <h2>Хобби и увлечения</h2>
+        <div class="blocks">
+            <div class="block">
+                <h3>Музыка</h3>
+                <p>Занятие музыкой, 7 лет в музыкальной школе и выступление на международных конкурсах.</p>
+            </div>
+            <div class="block">
+                <h3>Спорт</h3>
+                <p>Зал, баскетбол, настольный теннис, прыжки с парашютом и альпинизм.</p>
+            </div>
+            <div class="block">
+                <h3>Путешествия</h3>
+                <p>Интерес к новым местам и культурам. Путешествия по миру и изучение разных культур.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <form>
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Ваше сообщение" required></textarea>
+            <input type="submit" value="Отправить">
+        </form>
+    </section>
+
+    <footer>
+        <p>Связаться со мной</p>
+        <a href="https://github.com/nikitinMaclay">GitHub</a>
+        <a href="https://t.me/Mikhail_Maclay">Telegram</a>
+    </footer>
+
+</body>
+
+</html>
